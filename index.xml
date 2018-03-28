@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>莱恩哈特的记事本</title>
+    <link>https://mustang1988.github.io/</link>
+    <description>Recent content on 莱恩哈特的记事本</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 28 Mar 2018 16:18:00 +0800</lastBuildDate>
+    
+        <atom:link href="https://mustang1988.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>https://mustang1988.github.io/about/</link>
+      <pubDate>Wed, 28 Mar 2018 16:18:00 +0800</pubDate>
+      
+      <guid>https://mustang1988.github.io/about/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Git Commit 规范指南</title>
+      <link>https://mustang1988.github.io/post/git-commit-%E8%A7%84%E8%8C%83%E6%8C%87%E5%8D%97/</link>
+      <pubDate>Wed, 28 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mustang1988.github.io/post/git-commit-%E8%A7%84%E8%8C%83%E6%8C%87%E5%8D%97/</guid>
+      
+        <description>
+
+&lt;h2 id=&#34;1-commit-message-有啥用&#34;&gt;1. Commit message 有啥用&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;提供更多的历史信息，方便快速浏览&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;可以过滤某些commit(比如文档改动)，便于快速查找信息&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;可以直接从commit生成Change log,Change Log 是发布新版本时，用来说明与上一个版本差异的文档.例如:&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://oojbdbtdp.bkt.clowuddn.com/6632199163166779416.png?imageView/2/w/350&#34; alt=&#34;example&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;其他优点:&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;可读性好，清晰，不必深入看代码即可了解当前commit的作用&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;为 Code Reviewing 做准备&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;方便跟踪工程历史&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;让其他的开发者在运行 git blame 的时候想跪谢&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;提高项目的整体质量，提高个人工程素质&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;2-正确的-commit-message-的使用姿势&#34;&gt;2. 正确的 Commit message 的使用姿势&lt;/h2&gt;
+
+&lt;p&gt;每次提交，Commit message 都包括三个部分：Header，Body 和 Footer.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    &amp;lt;type&amp;gt;(&amp;lt;scope&amp;gt;): &amp;lt;subject&amp;gt;
+    &amp;lt;空行&amp;gt;
+    &amp;lt;body&amp;gt;
+    &amp;lt;空行&amp;gt;
+    &amp;lt;footer&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;1-header&#34;&gt;1. Header&lt;/h3&gt;
+
+&lt;p&gt;Header部分只有一行，包括三个字段：type(必需)、scope(可选)和subject(必需)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;type&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;用于说明 commit 的类别，只允许使用下面7个标识&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;标识&lt;/th&gt;
+&lt;th&gt;作用&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;feat&lt;/td&gt;
+&lt;td&gt;新增功能(feature)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;fix&lt;/td&gt;
+&lt;td&gt;修复bug&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;docs&lt;/td&gt;
+&lt;td&gt;文档更新&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;style&lt;/td&gt;
+&lt;td&gt;更新代码格式,不影响代码的原始逻辑和执行&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;refactor&lt;/td&gt;
+&lt;td&gt;重构(即不是新增功能，也不是修改bug的代码)&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;6&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;test&lt;/td&gt;
+&lt;td&gt;新增单元测试用例&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;7&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;chore&lt;/td&gt;
+&lt;td&gt;构建过程或辅助工具的变动&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;8&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;perf&lt;/td&gt;
+&lt;td&gt;提升优化性能&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;9&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;deps&lt;/td&gt;
+&lt;td&gt;升级依赖&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;scope&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;scope用于说明 commit 影响的范围，比如数据层、控制层、视图层等等，视项目不同而不同
+如果你的修改影响了不止一个scope，你可以使用*代替&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;subject&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;subject是 commit 目的的简短描述需要注意以下事项:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;注意点&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;不超过50个字符&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;以动词开头，使用第一人称现在时，比如change，而不是changed或changes&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;第一个字母小写&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;结尾不加句号（.）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;2-body&#34;&gt;2. Body&lt;/h3&gt;
+
+&lt;p&gt;Body 部分是对本次 commit 的详细描述，可以分成多行,Body编写注意点:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;注意点&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;1&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;每行不超过72个字符&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;2&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;段落之间用空行隔开&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;3&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;分段表述时,使用悬挂缩进&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;4&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;使用第一人称现在时，比如使用change而不是changed或changes&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;5&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;应该说明代码变动的动机，以及与以前行为的对比&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&#34;3-footer&#34;&gt;3. Footer&lt;/h3&gt;
+
+&lt;p&gt;通常情况下的commit是不需要编写Footer部分的说明的,仅在以下情况发生时编写&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;不兼容变动&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;如果当前代码与上一个版本不兼容，则 Footer 部分以BREAKING CHANGE开头，后面是对变动的描述、以及变动理由和迁移方法&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;关闭 Issue&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;如果当前 commit 针对某个issue，那么可以在 Footer 部分关闭这个 issue&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Revert&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;如果当前 commit 用于撤销以前的 commit，则必须以revert:开头，后面跟着被撤销 Commit 的 Header.Body部分的格式是固定的，必须写成This reverts commit &lt;hash&gt;.，其中的hash是被撤销 commit 的 SHA 标识符.如果当前 commit 与被撤销的 commit，在同一个发布（release）里面，那么它们都不会出现在 Change log 里面如果两者在不同的发布，那么当前 commit，会出现在 Change log 的Reverts小标题下面&lt;/p&gt;
+
+&lt;h3 id=&#34;4-示例&#34;&gt;4.示例&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;初始化创建一个新的Git版本库&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;给初始化提交添加版本标签(0.0.1)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://oojbdbtdp.bkt.clouddn.com/init.png&#34; alt=&#34;init&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;提交一个新功能&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git log 0.0.1 HEAD --grep feat
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://oojbdbtdp.bkt.clouddn.com/feat.png&#34; alt=&#34;feat&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;提交一个bug修正&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git log 0.0.1 HEAD --grep fix
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://oojbdbtdp.bkt.clouddn.com/fix.png&#34; alt=&#34;fix&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;提交一次文档更新&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git log 0.0.1 HEAD --grep docs
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://oojbdbtdp.bkt.clouddn.com/docs.png&#34; alt=&#34;docs&#34; /&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;提交一次代码格式修改&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;  git log 0.0.1 HEAD --grep style
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://oojbdbtdp.bkt.clouddn.com/style.png&#34; alt=&#34;style&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;提交一次代码优化重构&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;  git log 0.0.1 HEAD --grep refactor
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://oojbdbtdp.bkt.clouddn.com/refactor.png&#34; alt=&#34;refactor&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;提交一个单元测试&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;  git log 0.0.1 HEAD --grep test
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://oojbdbtdp.bkt.clouddn.com/test.png&#34; alt=&#34;test&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;查看所有git提交记录
+&lt;code&gt;
+git log 0.0.1 HEAD --pretty=format:%s
+&lt;/code&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://oojbdbtdp.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-04-19%2015.54.18.png&#34; alt=&#34;log&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;使用&lt;a href=&#34;https://github.com/jonas/tig&#34;&gt;tig&lt;/a&gt;查看到的提交记录:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://oojbdbtdp.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-04-19%2015.59.36.png&#34; alt=&#34;tig&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;5-生成changelog&#34;&gt;5.生成changelog&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;安装工具&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm install -g conventional-changelog-cli
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;配置conventional-changelog&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;  cd  项目目录
+  npm init
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;修改 package.json,添加:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;  &amp;quot;scripts&amp;quot;: {
+      &amp;quot;changelog&amp;quot;: &amp;quot;conventional-changelog -p angular -i CHANGELOG.md -s -r 0&amp;quot;
+  }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;执行命令&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm run changelog
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;查看版本库目录下生成的CHANGELOG.md文件,如下图所示:&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://oojbdbtdp.bkt.clouddn.com/changelog.png?imageView/2/w/350&#34; alt=&#34;changelog&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;工具默认只会将feat和fix这两个type的commit信息抓取出来并生成到CHANGELOG.md文件中.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;6-sourcetree-配置默认commit-message-模板&#34;&gt;6.SourceTree 配置默认commit message 模板&lt;/h3&gt;
+
+&lt;p&gt;SourceTree提供了自定义的提交模板配置功能.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;在SourceTree中点击仓库菜单-&amp;gt;仓库设置-&amp;gt;提交模板
+填入以下内容:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;type(scope): subject  
+
+body  
+
+bodydetail  
+
+foot
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;保存设置,之后每次commit代码时,这个模板就会自动的填充到commit message中,然后我们只需要替换修改必要的部分就好了.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;3-参考文献&#34;&gt;3.参考文献:&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#heading=h.uyo6cb12dt6w&#34;&gt;AngularJS Git Commit Message Conventions&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://segmentfault.com/a/1190000009048911&#34;&gt;git commit 规范指南&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html&#34;&gt;Commit message 和 Change log 编写指南&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#toc10&#34;&gt;Contributing to AngularJS&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>
