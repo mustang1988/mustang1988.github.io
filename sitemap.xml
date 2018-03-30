@@ -10,8 +10,15 @@
   </url>
   
   <url>
+    <loc>https://mustang1988.github.io/post/php-%E4%B8%AD%E7%9A%84trait/</loc>
+    <lastmod>2017-04-17T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://mustang1988.github.io/post/git-commit-%E8%A7%84%E8%8C%83%E6%8C%87%E5%8D%97/</loc>
-    <lastmod>2018-03-28T00:00:00+00:00</lastmod>
+    <lastmod>2017-04-14T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -24,28 +31,42 @@
   
   <url>
     <loc>https://mustang1988.github.io/tags/git/</loc>
-    <lastmod>2018-03-28T00:00:00+00:00</lastmod>
+    <lastmod>2017-04-14T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mustang1988.github.io/categories/git/</loc>
-    <lastmod>2018-03-28T00:00:00+00:00</lastmod>
+    <lastmod>2017-04-14T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mustang1988.github.io/tags/php/</loc>
+    <lastmod>2017-04-17T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mustang1988.github.io/categories/php/</loc>
+    <lastmod>2017-04-17T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mustang1988.github.io/post/</loc>
-    <lastmod>2018-03-28T00:00:00+00:00</lastmod>
+    <lastmod>2017-04-17T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mustang1988.github.io/tags/</loc>
-    <lastmod>2018-03-28T00:00:00+00:00</lastmod>
+    <lastmod>2017-04-14T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -59,7 +80,7 @@
   
   <url>
     <loc>https://mustang1988.github.io/tags/%E8%A7%84%E8%8C%83/</loc>
-    <lastmod>2018-03-28T00:00:00+00:00</lastmod>
+    <lastmod>2017-04-14T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>

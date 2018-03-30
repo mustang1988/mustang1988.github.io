@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Php on 莱恩哈特的记事本</title>
+    <link>https://mustang1988.github.io/categories/php/</link>
+    <description>Recent content in Php on 莱恩哈特的记事本</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 17 Apr 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://mustang1988.github.io/categories/php/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PHP 中的 Trait</title>
+      <link>https://mustang1988.github.io/post/php-%E4%B8%AD%E7%9A%84trait/</link>
+      <pubDate>Mon, 17 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mustang1988.github.io/post/php-%E4%B8%AD%E7%9A%84trait/</guid>
+      <description>Trait是神马 Trait是PHP5.4.0中加入的语言特性,是一种代码复用机制,为了解决类的单继承导致的一些局限性问题.可以简单理解为一种</description>
+    </item>
+    
+  </channel>
+</rss>

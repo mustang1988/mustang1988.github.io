@@ -6,7 +6,7 @@
     <description>Recent content in 规范 on 莱恩哈特的记事本</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 28 Mar 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 14 Apr 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://mustang1988.github.io/tags/%E8%A7%84%E8%8C%83/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Git Commit 规范指南</title>
       <link>https://mustang1988.github.io/post/git-commit-%E8%A7%84%E8%8C%83%E6%8C%87%E5%8D%97/</link>
-      <pubDate>Wed, 28 Mar 2018 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 14 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>https://mustang1988.github.io/post/git-commit-%E8%A7%84%E8%8C%83%E6%8C%87%E5%8D%97/</guid>
       <description>1. Commit message 有啥用 提供更多的历史信息，方便快速浏览 可以过滤某些commit(比如文档改动)，便于快速查找信息 可以直接从commit生成Change</description>

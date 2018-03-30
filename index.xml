@@ -23,9 +23,102 @@
     </item>
     
     <item>
+      <title>PHP 中的 Trait</title>
+      <link>https://mustang1988.github.io/post/php-%E4%B8%AD%E7%9A%84trait/</link>
+      <pubDate>Mon, 17 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mustang1988.github.io/post/php-%E4%B8%AD%E7%9A%84trait/</guid>
+      
+        <description>&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Trait是神马&lt;/p&gt;
+
+&lt;p&gt;Trait是PHP5.4.0中加入的语言特性,是一种代码复用机制,为了解决类的单继承导致的一些局限性问题.可以简单理解为一种多重继承的一种替代方案.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Trait和类的继承有何区别&lt;/p&gt;
+
+&lt;p&gt;Trait和类相似, 但仅仅旨在用细粒度和一致的方式来组合功能, Trait无法实例化成具体的对象,如果将传统类的继承理解为纵向的代码复用与拓展,那么trait就提供了横向代码复用的能力.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Trait的具体使用&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;什么时候可以使用trait?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;理论上凡是需要或将要使用继承的地方都可以考虑使用trait来实现,其次当有两个完全无关的类(无继承关系,各自有自己独立的父类),但是这两个类有需要编写相同的逻辑实现时,就可以考虑使用trait来拓展类的功能&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Trait的使用方式&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Trait官方示例:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://oojbdbtdp.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-04-17%2015.29.26.png&#34; alt=&#34;官方示例&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Trait和类继承同时使用时的覆盖问题&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;从基类继承的成员会被 trait 插入的成员所覆盖。优先顺序是来自当前类的成员覆盖了 trait 的方法，而 trait 则覆盖了被继承的方法。&lt;/p&gt;
+
+&lt;p&gt;优先级顺序:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;子类override的父类方法 &amp;gt; trait方法 &amp;gt; 子类继承自父类的方法&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;当前类的成员方法 &amp;gt; trait方法&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;多个Trait同时使用&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;和implement接口类似,在use引入trait时,允许同时引入多个trait,并使用逗号隔开.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;trait冲突&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;当一个类引入了多个trait,且这些trait中都定义了相同名称的方法,此时就会出现trait冲突,如果逻辑中没有编写对应的处理,则会抛出异常中断执行.
+当发生trait冲突时,需要使用 insteadof 操作符来明确指定使用冲突方法中的哪一个。以上方式仅允许排除掉其它方法，as 操作符可以将其中一个冲突的方法以另一个名称来引入。&lt;/p&gt;
+
+&lt;p&gt;例如:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://oojbdbtdp.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-04-17%2015.32.12.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://oojbdbtdp.bkt.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-04-17%2015.32.20.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;trait的组合&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;trait支持组合使用,也就是在一个trait中可以引入另一个或多个 trait来组合成一个新的trait,通过把逻辑实现的最小单元化,理论上可以用不同的trait排列组合,整合出无穷多的新trait,从而取代传统类的继承都不在话下.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;trait中的抽象成员&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;trait中也允许定义抽象成员方法,当有其他类引用该trait时必须对其中的抽象方法编写实现,类似于抽象类和接口的使用&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;trait中可以定义静态方法&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;trait中的属性定义&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;trait中可以定义属性,如果引入trait的类和trait中定义的属性存在冲突,则会抛出异常,但是,如果类中定义的属性和trait中定义的属性兼容(相同的访问修饰符和初始值)则类中的属性会覆盖trait中的,否则抛出异常.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;总结&lt;/p&gt;
+
+&lt;p&gt;Trait特性可以说从根本上解决了单继承语言代码横向复用的大问题,利用trait的自由任意组合的机制,理论上都可以吧类的继承完全替代掉.但是trait使用时需要注意的问题点也比较多,尤其是成员方法的命名冲突,因为PHP是没有方法重载的,所以这个问题会变得尤其突出,所以在我们日常使用的时候需要特别小心.&lt;/p&gt;
+
+&lt;p&gt;现如今主流的PHP框架中都或多或少的引入了trait特性来实现一些意想不到的功能,比如yii的ORM组件就大量的使用了trait来组合通用的数据库查询实现:&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>Git Commit 规范指南</title>
       <link>https://mustang1988.github.io/post/git-commit-%E8%A7%84%E8%8C%83%E6%8C%87%E5%8D%97/</link>
-      <pubDate>Wed, 28 Mar 2018 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 14 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>https://mustang1988.github.io/post/git-commit-%E8%A7%84%E8%8C%83%E6%8C%87%E5%8D%97/</guid>
       
