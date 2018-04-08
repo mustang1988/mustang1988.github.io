@@ -10,6 +10,13 @@
   </url>
   
   <url>
+    <loc>https://mustang1988.github.io/post/%E4%BD%BF%E7%94%A8dockerfile%E6%9E%84%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84docker%E9%95%9C%E5%83%8F/</loc>
+    <lastmod>2017-07-12T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://mustang1988.github.io/post/php-%E4%B8%AD%E7%9A%84trait/</loc>
     <lastmod>2017-04-17T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -25,6 +32,20 @@
   
   <url>
     <loc>https://mustang1988.github.io/categories/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mustang1988.github.io/tags/docker/</loc>
+    <lastmod>2017-07-12T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mustang1988.github.io/categories/docker/</loc>
+    <lastmod>2017-07-12T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -59,14 +80,14 @@
   
   <url>
     <loc>https://mustang1988.github.io/post/</loc>
-    <lastmod>2017-04-17T00:00:00+00:00</lastmod>
+    <lastmod>2017-07-12T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mustang1988.github.io/tags/</loc>
-    <lastmod>2017-04-14T00:00:00+00:00</lastmod>
+    <lastmod>2017-07-12T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>

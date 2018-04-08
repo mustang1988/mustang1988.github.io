@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on 莱恩哈特的记事本</title>
+    <link>https://mustang1988.github.io/categories/docker/</link>
+    <description>Recent content in Docker on 莱恩哈特的记事本</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 12 Jul 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://mustang1988.github.io/categories/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>使用Dockerfile构建自己的docker镜像</title>
+      <link>https://mustang1988.github.io/post/%E4%BD%BF%E7%94%A8dockerfile%E6%9E%84%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84docker%E9%95%9C%E5%83%8F/</link>
+      <pubDate>Wed, 12 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mustang1988.github.io/post/%E4%BD%BF%E7%94%A8dockerfile%E6%9E%84%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84docker%E9%95%9C%E5%83%8F/</guid>
+      <description>为什么要自己构建docker镜像? docker镜像是啥 Docker 镜像是一个特殊的文件系统，除了提供容器运行时所需的程序、库、资源、配置等文件外，还包</description>
+    </item>
+    
+  </channel>
+</rss>
