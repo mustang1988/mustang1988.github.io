@@ -31,9 +31,27 @@
     <item>
       <title>Php</title>
       <link>https://mustang1988.github.io/categories/php/</link>
-      <pubDate>Mon, 17 Apr 2017 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 27 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>https://mustang1988.github.io/categories/php/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rpc</title>
+      <link>https://mustang1988.github.io/categories/rpc/</link>
+      <pubDate>Thu, 27 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mustang1988.github.io/categories/rpc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Thrift</title>
+      <link>https://mustang1988.github.io/categories/thrift/</link>
+      <pubDate>Thu, 27 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mustang1988.github.io/categories/thrift/</guid>
       <description></description>
     </item>
     

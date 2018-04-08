@@ -17,6 +17,13 @@
   </url>
   
   <url>
+    <loc>https://mustang1988.github.io/post/thrift%E7%94%9F%E6%88%90php%E6%8E%A5%E5%8F%A3/</loc>
+    <lastmod>2017-04-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://mustang1988.github.io/post/php-%E4%B8%AD%E7%9A%84trait/</loc>
     <lastmod>2017-04-17T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -37,13 +44,6 @@
   </url>
   
   <url>
-    <loc>https://mustang1988.github.io/tags/docker/</loc>
-    <lastmod>2017-07-12T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://mustang1988.github.io/categories/docker/</loc>
     <lastmod>2017-07-12T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -51,8 +51,8 @@
   </url>
   
   <url>
-    <loc>https://mustang1988.github.io/tags/git/</loc>
-    <lastmod>2017-04-14T00:00:00+00:00</lastmod>
+    <loc>https://mustang1988.github.io/tags/docker/</loc>
+    <lastmod>2017-07-12T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -65,15 +65,22 @@
   </url>
   
   <url>
-    <loc>https://mustang1988.github.io/tags/php/</loc>
-    <lastmod>2017-04-17T00:00:00+00:00</lastmod>
+    <loc>https://mustang1988.github.io/tags/git/</loc>
+    <lastmod>2017-04-14T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mustang1988.github.io/categories/php/</loc>
-    <lastmod>2017-04-17T00:00:00+00:00</lastmod>
+    <lastmod>2017-04-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mustang1988.github.io/tags/php/</loc>
+    <lastmod>2017-04-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -86,8 +93,36 @@
   </url>
   
   <url>
+    <loc>https://mustang1988.github.io/categories/rpc/</loc>
+    <lastmod>2017-04-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mustang1988.github.io/tags/rpc/</loc>
+    <lastmod>2017-04-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://mustang1988.github.io/tags/</loc>
     <lastmod>2017-07-12T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mustang1988.github.io/categories/thrift/</loc>
+    <lastmod>2017-04-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mustang1988.github.io/tags/thrift/</loc>
+    <lastmod>2017-04-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>

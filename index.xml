@@ -325,6 +325,40 @@
     </item>
     
     <item>
+      <title>Thrift生成PHP接口</title>
+      <link>https://mustang1988.github.io/post/thrift%E7%94%9F%E6%88%90php%E6%8E%A5%E5%8F%A3/</link>
+      <pubDate>Thu, 27 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mustang1988.github.io/post/thrift%E7%94%9F%E6%88%90php%E6%8E%A5%E5%8F%A3/</guid>
+      
+        <description>&lt;p&gt;本文所使用thrift版本(&lt;a href=&#34;https://thrift.apache.org/download&#34;&gt;0.10.0&lt;/a&gt;)&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;支持&lt;a href=&#34;http://www.php-fig.org/psr/psr-4/&#34;&gt;PSR4&lt;/a&gt;自动加载标准&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$ thrift --out {OUTPUT_DIR} --gen php:psr4 {THRIFT_FILE}&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;{OUTPUT_DIR}为php接口文件的输出目录&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;{THRIFT_FILE}为需要生成接口的thrift协议文件&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;支持指定namespace&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$ thrift --out {OUTPUT_DIR} --gen php:psr4,nsglobal={NAMESPACE} {THRIFT_FILE}&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;如果NAMESPACE有多层级,注意使用引号引起来&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>PHP 中的 Trait</title>
       <link>https://mustang1988.github.io/post/php-%E4%B8%AD%E7%9A%84trait/</link>
       <pubDate>Mon, 17 Apr 2017 00:00:00 +0000</pubDate>
