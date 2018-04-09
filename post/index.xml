@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>MongoDB 数据库数据迁移</title>
+      <link>https://mustang1988.github.io/post/mongodb-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%95%B0%E6%8D%AE%E8%BF%81%E7%A7%BB/</link>
+      <pubDate>Mon, 27 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://mustang1988.github.io/post/mongodb-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%95%B0%E6%8D%AE%E8%BF%81%E7%A7%BB/</guid>
+      <description>导出旧数据 mongodump -h 服务器ip -d 需要导出的数据库 -o 导出文件所在目录 导出完成后会在指定目录生成对应数据库名称的目录,其中有.json 和 .bson格式</description>
+    </item>
+    
+    <item>
       <title>使用Dockerfile构建自己的docker镜像</title>
       <link>https://mustang1988.github.io/post/%E4%BD%BF%E7%94%A8dockerfile%E6%9E%84%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84docker%E9%95%9C%E5%83%8F/</link>
       <pubDate>Wed, 12 Jul 2017 00:00:00 +0000</pubDate>
