@@ -23,6 +23,105 @@
     </item>
     
     <item>
+      <title>关于IP地址值的持久化存储</title>
+      <link>https://mustang1988.github.io/post/%E5%85%B3%E4%BA%8Eip%E5%9C%B0%E5%9D%80%E5%80%BC%E7%9A%84%E6%8C%81%E4%B9%85%E5%8C%96%E5%AD%98%E5%82%A8/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mustang1988.github.io/post/%E5%85%B3%E4%BA%8Eip%E5%9C%B0%E5%9D%80%E5%80%BC%E7%9A%84%E6%8C%81%E4%B9%85%E5%8C%96%E5%AD%98%E5%82%A8/</guid>
+      
+        <description>&lt;p&gt;前两天整理浏览器书签的时候翻出来这篇文章&lt;a href=&#34;https://mp.weixin.qq.com/s/oQstfRFuGOvUVnElRqS5aw&#34;&gt;《赶集mysql军规》&lt;/a&gt;文中&amp;rdquo;字段类军规&amp;rdquo;中写到&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;用int而不是char(15)存储ip&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;由此联想到,如何使用int来存储ip呢?因为我通常都会使用char(15)来存储ip地址信息的,这个int来存储是什么鬼?&lt;/p&gt;
+
+&lt;p&gt;后来仔细想了想,也不是完全没有道理,ip地址其本质就是一个32位的二进制数啊,我把这个二进制数转成十进制再持久化没毛病啊,于是开始了尝试,首先就是xxx.xxx.xxx.xxx格式的IP地址和int值的双向转换.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;IP字符串转int&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;将xxx.xxx.xxx.xxx格式的IP地址拆分成[xxx,xxx,xxx,xxx]的数组&lt;/li&gt;
+&lt;li&gt;将数组中每个十进制值转成二进制,不足8位的需要补0&lt;/li&gt;
+&lt;li&gt;将数组转回到字符串,得到一个32位的二进制值&lt;/li&gt;
+&lt;li&gt;将这个32位的二进制值转成十进制&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;    function ipv4ToInt(ip) {
+        const ip_add_arr = ip.split(&#39;.&#39;)
+        if (ip_add_arr.length !== 4) {
+            throw `invalid ip address &amp;quot;${ip}&amp;quot;`
+        }
+        for (let i = 0, length = ip_add_arr.length; i &amp;lt; length; i++) {
+            ip_add_arr[ i ] = leftpad(parseInt(ip_add_arr[ i ]).toString(2), 8, &#39;0&#39;)
+        }
+        const result = parseInt(ip_add_arr.join(&#39;&#39;), 2)
+        if (result &amp;gt;= 0 &amp;amp;&amp;amp; result &amp;lt;= 4294967295) {
+            return result
+        }
+        else {
+            throw `invalid ip address &amp;quot;${ip}&amp;quot;`
+        }
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;int 转IP字符串&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;将十进制数字转换为32位二进制值,不足32位的需要补0&lt;/li&gt;
+&lt;li&gt;以8位为一个单位,拆分这个二进制值,得到一个长度为4的二进制数组&lt;/li&gt;
+&lt;li&gt;将拆分后的各个部分,转换成十进制,得到一个长度4的十进制数组&lt;/li&gt;
+&lt;li&gt;将这个数组转换为字符串,用“.”隔开元素&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;    function intToIPv4(int) {
+        if (int &amp;lt; 0 || int &amp;gt; 4294967295) {
+            throw `invalid int value &amp;quot;${int}&amp;quot; to parse`
+        }
+        // 10进制value转,ip地址字符串
+        let ip_bin = leftpad(parseInt(int).toString(2), 32, &#39;0&#39;)
+        const reg = /\d{8}/g
+        const rs = ip_bin.match(reg)
+        for (let i = 0, length = rs.length; i &amp;lt; length; i++) {
+            rs[ i ] = parseInt(rs[ i ], 2)
+        }
+        return rs.join(&#39;.&#39;)
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;测试
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;    try {
+        const ip = &#39;127.0.0.1&#39;
+        const value = ipv4ToInt(ip)
+        console.log(`${ip} =&amp;gt; ${value}`)
+        const int = value + Math.random() * 10
+        console.log(`${int} =&amp;gt; ${intToIPv4(int)}`)
+    }
+    catch (e) {
+        console.log(e)
+    }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;运行结果&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;    $ node index.js
+      127.0.0.1 =&amp;gt; 2130706433
+      2130706440.9084392 =&amp;gt; 127.0.0.8
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>Laravel模块化开发</title>
       <link>https://mustang1988.github.io/post/laravel%E6%A8%A1%E5%9D%97%E5%8C%96%E6%8B%86%E5%88%86/</link>
       <pubDate>Mon, 27 Nov 2017 00:00:00 +0000</pubDate>

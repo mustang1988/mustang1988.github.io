@@ -29,6 +29,15 @@
     </item>
     
     <item>
+      <title>Ip地址</title>
+      <link>https://mustang1988.github.io/categories/ip%E5%9C%B0%E5%9D%80/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mustang1988.github.io/categories/ip%E5%9C%B0%E5%9D%80/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Laravel</title>
       <link>https://mustang1988.github.io/categories/laravel/</link>
       <pubDate>Mon, 27 Nov 2017 00:00:00 +0000</pubDate>
@@ -70,6 +79,24 @@
       <pubDate>Thu, 27 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>https://mustang1988.github.io/categories/thrift/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>持久化</title>
+      <link>https://mustang1988.github.io/categories/%E6%8C%81%E4%B9%85%E5%8C%96/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mustang1988.github.io/categories/%E6%8C%81%E4%B9%85%E5%8C%96/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>数据库</title>
+      <link>https://mustang1988.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+      <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://mustang1988.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</guid>
       <description></description>
     </item>
     
