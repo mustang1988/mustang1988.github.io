@@ -65,13 +65,6 @@
   </url>
   
   <url>
-    <loc>https://mustang1988.github.io/categories/docker/</loc>
-    <lastmod>2017-07-12T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://mustang1988.github.io/tags/docker/</loc>
     <lastmod>2017-07-12T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -79,8 +72,8 @@
   </url>
   
   <url>
-    <loc>https://mustang1988.github.io/categories/git/</loc>
-    <lastmod>2017-04-14T00:00:00+00:00</lastmod>
+    <loc>https://mustang1988.github.io/categories/docker/</loc>
+    <lastmod>2017-07-12T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -93,8 +86,8 @@
   </url>
   
   <url>
-    <loc>https://mustang1988.github.io/categories/ip%E5%9C%B0%E5%9D%80/</loc>
-    <lastmod>2018-04-11T00:00:00+00:00</lastmod>
+    <loc>https://mustang1988.github.io/categories/git/</loc>
+    <lastmod>2017-04-14T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -107,8 +100,8 @@
   </url>
   
   <url>
-    <loc>https://mustang1988.github.io/categories/laravel/</loc>
-    <lastmod>2017-11-27T00:00:00+00:00</lastmod>
+    <loc>https://mustang1988.github.io/categories/ip%E5%9C%B0%E5%9D%80/</loc>
+    <lastmod>2018-04-11T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -121,7 +114,7 @@
   </url>
   
   <url>
-    <loc>https://mustang1988.github.io/categories/mongodb/</loc>
+    <loc>https://mustang1988.github.io/categories/laravel/</loc>
     <lastmod>2017-11-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
@@ -135,7 +128,7 @@
   </url>
   
   <url>
-    <loc>https://mustang1988.github.io/categories/php/</loc>
+    <loc>https://mustang1988.github.io/categories/mongodb/</loc>
     <lastmod>2017-11-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
@@ -149,6 +142,13 @@
   </url>
   
   <url>
+    <loc>https://mustang1988.github.io/categories/php/</loc>
+    <lastmod>2017-11-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://mustang1988.github.io/post/</loc>
     <lastmod>2018-04-11T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -156,14 +156,14 @@
   </url>
   
   <url>
-    <loc>https://mustang1988.github.io/categories/rpc/</loc>
+    <loc>https://mustang1988.github.io/tags/rpc/</loc>
     <lastmod>2017-04-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://mustang1988.github.io/tags/rpc/</loc>
+    <loc>https://mustang1988.github.io/categories/rpc/</loc>
     <lastmod>2017-04-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
@@ -177,13 +177,6 @@
   </url>
   
   <url>
-    <loc>https://mustang1988.github.io/categories/thrift/</loc>
-    <lastmod>2017-04-27T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://mustang1988.github.io/tags/thrift/</loc>
     <lastmod>2017-04-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -191,8 +184,8 @@
   </url>
   
   <url>
-    <loc>https://mustang1988.github.io/categories/%E6%8C%81%E4%B9%85%E5%8C%96/</loc>
-    <lastmod>2018-04-11T00:00:00+00:00</lastmod>
+    <loc>https://mustang1988.github.io/categories/thrift/</loc>
+    <lastmod>2017-04-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -205,7 +198,7 @@
   </url>
   
   <url>
-    <loc>https://mustang1988.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <loc>https://mustang1988.github.io/categories/%E6%8C%81%E4%B9%85%E5%8C%96/</loc>
     <lastmod>2018-04-11T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
@@ -213,6 +206,13 @@
   
   <url>
     <loc>https://mustang1988.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <lastmod>2018-04-11T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mustang1988.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
     <lastmod>2018-04-11T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
